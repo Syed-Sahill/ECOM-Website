@@ -948,7 +948,20 @@ main{
 } 
 
 .contact-content input{
+  text-transform: none;
   width: 50rem;
+}
+
+.contact-content input::placeholder{
+  text-transform: capitalize;
+}
+
+.contact-content textarea{
+  text-transform: none;
+}
+
+.contact-content textarea::placeholder{
+  text-transform: capitalize;
 }
 
 .contact-title{
@@ -2073,3 +2086,4 @@ footer{
 
 
                                               /* MEDIA QUERIES END */
+
