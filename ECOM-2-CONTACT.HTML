@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ECOM-2.CSS">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+        crossorigin="anonymous"referrerpolicy="no-referrer" />
+    <title>Ecom Website with JS</title>
+</head>
+<body>
+    <!-- HEADER SECTION START -->
+    <header class="section-navbar">
+        <div class="top_txt">
+            <div class="head container">
+                <div class="head-txt">
+                    <p>Free shipping, 30-day return or refund quarantee.</p>
+                </div>
+                <div class="sign-in-up">
+                    <a href="#">SIGN IN</a>
+                    <a href="#">SIGN UP</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                    <div class="navbar-brand">
+                        <a href="">
+                            <img src="imagess/circle.logo1.webp" alt="my sahil eduhub logo" width="25%"  height="auto">
+                        </a>
+                    </div>
+
+
+                    <div class="navbar">
+                        <ul>
+                            <li class="nav-item"> 
+                                <a class="nav-link" href="ECOM-2-HOME.HTML">Home</a>
+                            </li>
+
+                             <li class="nav-item">
+                                <a class="nav-link" href="ECOM-2-ABOUT.HTML">About</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="ECOM-2-PRODUCTS.HTML">Products</a>
+                            </li>
+
+                            <li class="nav-item"> 
+                                <a class="nav-link" href="ECOM-2-CONTACT.HTML">Contact</a>
+                            </li>
+
+                             <li class="nav-item"> 
+                                <a href="ADD-TO-CART.HTML" class="nav-link- add-to-cart-button"  id="cart-value">
+                                    <i class="fa-solid fa-cart-shopping"> 0 </i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    </header>
+
+
+    <!-- CONTACT SECTION START -->
+
+
+             <div class="section-contact">
+                <div class="contact-header">
+                    <h2 class="section-common-heading">Contact Us</h2>
+                    <p class="section-common-subheading">
+                        Get in touch with us. We are always here to help you.
+                    </p>
+                </div>
+
+                <div class="container grid grid-two--cols">
+                    <div class="contact-content">
+                        <form  action="https://formspree.io/f/mrbkadbgg" method="POST">
+                            <div class="grid grid-two-cols mb-3">
+                                <div>
+                                    <label for="username">full name</label>
+                                    <input 
+                                    type="text" 
+                                    name="username" 
+                                    id="username"
+                                    required autocomplete="off" 
+                                    placeholder="enter your name">
+                                </div>
+
+                                <div>
+                                    <label for="email">Email Address </label>
+                                    <input 
+                                    type="email" 
+                                    name="email" 
+                                    id="email"
+                                    required autocomplete="off" 
+                                    placeholder="abc@st.com">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="subject">Subject</label>
+                                <input 
+                                type="text" 
+                                name="subject"
+                                id="subject"
+                                placeholder="Title of your message">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="message">Message</label>
+                                <textarea 
+                                name="message" 
+                                id="message" 
+                                cols="30" 
+                                rows="10"
+                                placeholder="We are always here to help you."
+                            ></textarea>
+                            </div>
+
+                            <div class="contact-button">
+                                <button type="submit" class="btn btn-submit">Send message</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d57920.665366
+                        63659!2d67.12006043846125!3d24.862429243226348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768
+                        !4f13.1!5e0!3m2!1sen!2s!4v1755710470288!5m2!1sen!2s" width="600" height="450" 
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    </div>
+
+                </div>
+             </div>
+
+             <!-- CONTACT SECTION END -->
+
+                          <!-- FOOTER SECTION START -->
+            <footer class="section-footer">
+                <p>Design and Code By Syed Sahil</p>
+            </footer>
+            <!-- FOOTER SECTION END -->
+
+            <!-- <script type="module" src="ECOM-2.JS"></script> -->
+</body>
+</html>
