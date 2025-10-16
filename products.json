@@ -1,0 +1,62 @@
+[
+    {
+        "id" : 1,
+        "name" : "Laptop",
+        "brand" : "ExampleBrand",
+        "price" : "10000",
+        "stock" : "50",
+        "description" : "A laptop",
+        "image" : "imagess/laptop-pic.webp"
+    },
+    
+     {
+        "id" : 2,
+        "name" : "Iphone",
+        "brand" : "ExampleBrand",
+        "price" : "3650",
+        "stock" : "50",
+        "description" : "A iphone",
+        "image" : "imagess/iphone-pic.webp"
+    },
+
+     {
+        "id" : 3,
+        "name" : "Headphone",
+        "brand" : "ExampleBrand",
+        "price" : "2000",
+        "stock" : "50",
+        "description" : "A headphones",
+        "image" : "imagess/headphone-pic.webp"
+    },
+
+     {
+        "id" : 4,
+        "name" : "Laptop",
+        "brand" : "ExampleBrand",
+        "price" : "10000",
+        "stock" : "50",
+        "description" : "A laptop",
+        "image" : "imagess/laptop-pic.webp"
+    },
+    
+     {
+        "id" : 5,
+        "name" : "Iphone",
+        "brand" : "ExampleBrand",
+        "price" : "3650",
+        "stock" : "50",
+        "description" : "A iphone",
+        "image" : "imagess/iphone-pic.webp"
+    },
+
+     {
+        "id" : 6,
+        "name" : "Headphone",
+        "brand" : "ExampleBrand",
+        "price" : "2000",
+        "stock" : "50",
+        "description" : "A headphones",
+        "image" : "imagess/headphone-pic.webp"
+    }
+    
+]
