@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ECOM-2.CSS">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+        crossorigin="anonymous"referrerpolicy="no-referrer" />
+    <title>Add-To-Cart Page</title>
+    <style>
+        /* ======= ADD-TO-CART PAGE STYLING ======= */
+
+.cards {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.informaton {
+  display: grid;
+  grid-template-columns:repeat(5 , 1fr) ;
+  gap: 1.5rem;
+  flex: 1;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.image-container img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.product-name {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: start;
+  margin: 4rem 0;
+}
+
+.stock-element{
+    margin: 4rem 0;
+}
+
+.product-price {
+  font-weight: 500;
+  color: #333;
+  margin-top: 4rem;
+  font-size: 1.6rem;
+  white-space: nowrap;
+}
+
+.cart-Increment,
+.cart-Decrement {
+   padding: 4px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.product-quantity {
+  font-weight: bold;
+  font-size: 1rem
+}
+
+.remove-to-cart-button {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 1rem 1.3rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 4rem 0;
+}
+
+.remove-to-cart-button:hover {
+  color: black;
+  border: 2px solid black;
+  background-color: white;
+}
+
+    </style>
+</head>
+<body>
+    <!-- HEADER SECTION START -->
+    <header class="section-navbar">
+        <div class="top_txt">
+            <div class="head container">
+                <div class="head-txt">
+                    <p>Free shipping, 30-day return or refund quarantee.</p>
+                </div>
+                <div class="sign-in-up">
+                    <a href="#">SIGN IN</a>
+                    <a href="#">SIGN UP</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                    <div class="navbar-brand">
+                        <a href="">
+                            <img src="imagess/circle.logo1.webp" alt="my sahil eduhub logo" width="25%"  height="auto">
+                        </a>
+                    </div>
+
+
+                    <div class="navbar">
+                        <ul>
+                            <li class="nav-item"> 
+                                <a class="nav-link" href="ECOM-2-HOME.HTML">Home</a>
+                            </li>
+
+                             <li class="nav-item">
+                                <a class="nav-link" href="ECOM-2-ABOUT.HTML">About</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="ECOM-2-PRODUCTS.HTML">Products</a>
+                            </li>
+
+                            <li class="nav-item"> 
+                                <a class="nav-link" href="ECOM-2-CONTACT.HTML">Contact</a>
+                            </li>
+
+                             <li class="nav-item"> 
+                                <a href="ADD-TO-CART.HTML" class="nav-link- add-to-cart-button"  id="cart-value">
+                                    <i class="fa-solid fa-cart-shopping"> 0 </i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    </header>
+
+    <!-- HEADER SECTION END -->
+
+        <section class="addToCartElement">
+            <div class="container">
+                <section>
+                    <div id="productCartContainer"></div>
+                </section>
+
+                <div class="addToCartElementContainer">
+                <section class="productCartTotalElem">
+                    <div class="productCartTotalELement">
+                        <p class="select-offer">Select Offer Summary</p>
+                        <div class="prodcuctOrderTotal">
+                            <div>
+                                <p>Sub Total:</p>
+                                <p class="productSubtTotal">0</p>
+                            </div>
+                            <div class="tax-section">
+                                <p>Tax:</p>
+                                <p class="productTax">₨ 50</p>
+                            </div>
+                            <hr>
+                            <div class="final-total">
+                                <p>Final Total:</p>
+                                <p class="productFinalTotal">0</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--TEMPLATE FOR A PRODUCT START -->
+
+        <template id="productCartTemplate">
+            <div class="cards" id="card-value">
+                <article class="informaton [ card ]">
+                    <div class="image-container">
+                        <img class="product-image" src="" alt="">
+                    </div>
+
+                    <h2 class="product-name"></h2>
+
+                    <p class="product-price"></p>
+
+                    <div class="stock-element">
+                        <button class="cart-Increment">+</button>
+                        <p class="product-quantity" data-quantity="1">1</p>
+                        <button class="cart-Decrement">-</button>
+                    </div>
+
+                    <button class="add-to-cart-button remove-to-cart-button">
+                        Remove
+                    </button>
+                </article>
+            </div>
+        </template>
+
+        <!--TEMPLATE FOR A PRODUCT END -->
+
+
+     <!-- FOOTER SECTION START -->
+            <footer class="section-footer">
+                <p>Design and Code By Syed Sahil</p>
+            </footer>
+            <!-- FOOTER SECTION END -->
+
+            <script type="module" src="SHOW-ADD-TO-CART-CARDS.JS"></script>
+</body>
+</html>
